@@ -10,6 +10,12 @@ document.getElementById("btnThemNV").onclick = function () {
   arrNV.push(nhanVien);
   setLocalStorage("arrNV", arrNV);
   renderDataNV();
+  document.getElementById("QLNV").reset();
+};
+document.getElementById("btnThem").onclick = function () {
+  document.getElementById("QLNV").reset();
+  let email = document.getElementById("email");
+  email.readOnly = false;
 };
 // lấy dữ liệu nhân viên và kiểm tra validation
 function getValueForm() {
