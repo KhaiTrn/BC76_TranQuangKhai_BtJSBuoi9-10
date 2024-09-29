@@ -25,7 +25,8 @@ function getValueForm() {
   for (let field of arrField) {
     let { value, id } = field;
     nhanVien[id] = value;
-    let theThongBao = field.parentElement.querySelector("span");
+    let theThongBao =
+      field.parentElement.parentElement.querySelector("span.sp-thongbao");
     if (!checkEmptyValue(theThongBao, value)) {
       flag = false;
     } else {
